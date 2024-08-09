@@ -1,37 +1,69 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
+import { View, Text } from 'react-native'
+import React from 'react'
+import { Tabs } from 'expo-router'
+import { Feather } from '@expo/vector-icons'
+import { vh, vw } from '@/helpers/responsivesizes'
+import { theme } from '@/helpers/theme'
 
-import { TabBarIcon } from '@/components/navigation/TabBarIcon';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
 
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+const _layout = () => {
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-      }}>
-      <Tabs.Screen
-        name="index"
+   <Tabs  screenOptions={{
+    headerShown:false ,
+    tabBarStyle:{
+      
+      position:'absolute',
+       width:vw(100),
+       height: vh(10),
+       alignSelf:'center',
+       borderRadius:theme.curves.lg,
+       borderWidth:0,
+       backgroundColor:theme.primary.darker,
+      
+       
+       },
+       tabBarActiveTintColor:theme.primary.normal,
+       
+       }}>
+     <Tabs.Screen
+        name="home"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+          title: "",
+          tabBarIcon: ({ color }) => (
+            <Feather name="home" size={25} color={color} />
           ),
         }}
       />
-      <Tabs.Screen
-        name="explore"
+       <Tabs.Screen
+        name="messaging"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+          title: "",
+          tabBarIcon: ({ color }) => (
+            <Feather name="message-circle" size={25} color={color} />
           ),
         }}
       />
-    </Tabs>
-  );
+      
+       <Tabs.Screen
+        name="notification"
+        options={{
+          title: "",
+          tabBarIcon: ({ color }) => (
+            <Feather name="heart" size={25} color={color} />
+          ),
+        }}
+      />
+       <Tabs.Screen
+        name="profile"
+        options={{
+          title: "",
+          tabBarIcon: ({ color }) => (
+            <Feather name="user" size={25} color={color} />
+          ),
+        }}
+      />
+   </Tabs>
+  )
 }
+
+export default _layout

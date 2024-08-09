@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-  ]
+, "app/_layout.tsx" , "app/index.tsx", "app/login.tsx", "app/signup.tsx", "components/buttons.tsx", "constants/index.ts", "helpers/responsivesizes.tsx", "helpers/theme.ts", "lib/supabase.ts" ]
 }
