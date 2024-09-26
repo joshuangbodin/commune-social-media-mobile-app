@@ -7,8 +7,10 @@ const _layout = () => {
   return (
     <Tabs
       screenOptions={{
+        
         headerShown: false,
         tabBarStyle: {
+          position:'absolute',
           height: vh(9),
           marginHorizontal: vw(10),
           bottom: 25,
@@ -18,7 +20,12 @@ const _layout = () => {
           borderCurve: "continuous",
           borderWidth: 0,
           elevation: 0,
-          shadowOpacity: 100,
+          shadowOpacity: 0.2,
+          shadowColor:'gray',
+          shadowOffset:{
+            width:0,height:0
+          },
+          shadowRadius:20
         },
         tabBarShowLabel: false,
         tabBarActiveTintColor: "green",

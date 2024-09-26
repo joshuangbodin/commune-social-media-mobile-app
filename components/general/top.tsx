@@ -18,6 +18,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     height:vh(8),
-    paddingHorizontal:5,
+    borderRadius: 20,
   },
 });

@@ -20,7 +20,8 @@ export default ScreenWrapper;
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 8,
+    paddingHorizontal: 10,
     flex:1,
+    
   },
 });
