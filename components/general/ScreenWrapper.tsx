@@ -3,8 +3,8 @@ import React from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 interface props {
-  style: any;
-  children: React.ReactNode;
+  style?: any;
+  children?: React.ReactNode;
 }
 
 const ScreenWrapper: React.FC<props> = ({ style, children }) => {
@@ -21,5 +21,6 @@ export default ScreenWrapper;
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 8,
+    flex:1,
   },
 });

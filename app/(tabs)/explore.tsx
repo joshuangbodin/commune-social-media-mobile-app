@@ -1,14 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import ScreenWrapper from "@/components/general/ScreenWrapper";
 
 const explore = () => {
   return (
-    <View>
+    <ScreenWrapper>
       <Text>explore</Text>
-    </View>
-  )
-}
+    </ScreenWrapper>
+  );
+};
 
-export default explore
+export default explore;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

@@ -1,7 +1,7 @@
 import { FontAwesome6, Feather } from "@expo/vector-icons";
 import React from "react";
 import { Tabs } from "expo-router";
-import { vh } from "@/helpers/responsivesizes";
+import { vh, vw } from "@/helpers/responsivesizes";
 
 const _layout = () => {
   return (
@@ -10,9 +10,9 @@ const _layout = () => {
         headerShown: false,
         tabBarStyle: {
           height: vh(9),
-          marginHorizontal: 45,
+          marginHorizontal: vw(10),
           bottom: 25,
-          padding: 2.5,
+          padding: 3,
           paddingHorizontal: 5,
           borderRadius: 100,
           borderCurve: "continuous",
@@ -25,8 +25,7 @@ const _layout = () => {
         tabBarActiveBackgroundColor: "lightgreen",
         tabBarItemStyle: {
           borderRadius: 100,
-          height: vh(8.5),
-          width: vh(8.5),
+         
         },
       }}
     >
