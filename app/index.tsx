@@ -1,11 +1,11 @@
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 import React from "react";
 import ScreenWrapper from "@/components/general/ScreenWrapper";
 import { vh, vw } from "@/helpers/responsivesizes";
 import CustomText from "@/components/general/text";
 import { Feather } from "@expo/vector-icons";
-import { theme } from "@/theme/theme";
 import { BlurView } from "expo-blur";
+import { router } from "expo-router";
 
 const index = () => {
   return (
@@ -42,16 +42,21 @@ const index = () => {
 
         {/* call to action */}
         <View style={styles.info_btn_container}>
-          <Pressable style={styles.info_btn}>
+          <TouchableOpacity
+            onPress={() => router.push("/feed")}
+            style={styles.info_btn}
+          >
             <BlurView style={styles.info_btn_blur} />
             <View style={styles.info_btn_left}>
               <Feather size={vh(3.3)} name="arrow-up-right" />
             </View>
-            <CustomText style={{ color: "white" , }}>Explore Now</CustomText>
-            <View style={[styles.info_btn_left,{backgroundColor:'transparent'}]}>
-              <Feather size={vh(3.3)}  color={"gray"} name="chevrons-right" />
+            <CustomText style={{ color: "white" }}>Explore Now</CustomText>
+            <View
+              style={[styles.info_btn_left, { backgroundColor: "transparent" }]}
+            >
+              <Feather size={vh(3.3)} color={"gray"} name="chevrons-right" />
             </View>
-          </Pressable>
+          </TouchableOpacity>
         </View>
       </View>
     </ScreenWrapper>
@@ -66,7 +71,7 @@ const styles = StyleSheet.create({
     width: vw(100),
     height: vh(100),
     justifyContent: "flex-end",
-    paddingHorizontal:10,
+    paddingHorizontal: 10,
   },
   image_background: {
     position: "absolute",
@@ -91,7 +96,7 @@ const styles = StyleSheet.create({
   info_btn_container: {
     height: vh(15),
     justifyContent: "center",
-    
+
     //backgroundColor: "red",
   },
   info_btn: {
