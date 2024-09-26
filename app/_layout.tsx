@@ -1,22 +1,14 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import { Stack } from 'expo-router'
+import React from "react";
+import { Stack } from "expo-router";
 
 const _layout = () => {
   return (
-   <Stack  screenOptions={{headerShown:false}}>
-    <Stack.Screen name='splash'/>
-    <Stack.Screen name='index'>
-    </Stack.Screen>
-    <Stack.Screen
-        name="(tabs)"
-        options={{
-          headerShown: false,
-        }}
-        
-      />
-   </Stack>
-  )
-}
+    <Stack
+      screenOptions={{
+        headerShown: false,
+      }}
+    />
+  );
+};
 
-export default _layout
+export default _layout;
