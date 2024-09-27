@@ -2,6 +2,8 @@ import { FontAwesome6, Feather } from "@expo/vector-icons";
 import React from "react";
 import { Tabs } from "expo-router";
 import { vh, vw } from "@/helpers/responsivesizes";
+import { View } from "react-native";
+import { BlurView } from "expo-blur";
 
 const _layout = () => {
   return (
@@ -12,7 +14,7 @@ const _layout = () => {
         tabBarStyle: {
           position:'absolute',
           height: vh(9),
-          marginHorizontal: vw(10),
+          marginHorizontal: vw(15),
           bottom: 25,
           padding: 3,
           paddingHorizontal: 5,
@@ -28,12 +30,15 @@ const _layout = () => {
           shadowRadius:20
         },
         tabBarShowLabel: false,
-        tabBarActiveTintColor: "green",
-        tabBarActiveBackgroundColor: "lightgreen",
+        tabBarActiveTintColor: "white",
+        tabBarActiveBackgroundColor: "black",
         tabBarItemStyle: {
           borderRadius: 100,
          
         },
+        tabBarBackground: ()=> <BlurView>
+          
+        </BlurView>
       }}
     >
       <Tabs.Screen

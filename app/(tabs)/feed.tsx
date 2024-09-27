@@ -16,9 +16,10 @@ import {
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
 import CustomText from "@/components/general/text";
-import { vh } from "@/helpers/responsivesizes";
+import { vh, vw } from "@/helpers/responsivesizes";
 import CarouselList from "@/components/specific/feed/Carousel";
 import ArticleList from "@/components/specific/feed/articleList";
+import { router } from "expo-router";
 
 const feed = () => {
   return (
@@ -34,17 +35,21 @@ const feed = () => {
             Articles
           </CustomText>
         </View>
-        {/* top bar */}
+
+        {/* search bar */}
         <Top>
-          <TouchableOpacity style={styles.searchbar}>
+          <TouchableOpacity
+            onPress={() => router.push("/(tabs)/explore")}
+            style={styles.searchbar}
+          >
             <Feather size={vh(2.5)} name="search" />
             <TextInput
               style={styles.searchbar_input}
               placeholder="search article, writers and categories"
             ></TextInput>
           </TouchableOpacity>
-          <TouchableOpacity>
-            <FontAwesome6 size={vh(2.5)} name="bars-staggered" />
+          <TouchableOpacity style={styles.bars_btn}>
+            <FontAwesome6 size={vh(2.5)} color={"gray"} name="bars-staggered" />
           </TouchableOpacity>
         </Top>
 
@@ -55,7 +60,7 @@ const feed = () => {
 
         {/* Article List */}
         <View>
-          <ArticleList/>
+          <ArticleList />
         </View>
       </ScrollView>
     </ScreenWrapper>
@@ -73,7 +78,7 @@ const styles = StyleSheet.create({
     backgroundColor: "lightgray",
     height: vh(7),
     flex: 1,
-    marginRight: 20,
+    marginRight: 10,
     alignItems: "center",
     justifyContent: "flex-start",
     gap: 10,
@@ -85,5 +90,14 @@ const styles = StyleSheet.create({
     flex: 1,
     height: "100%",
     borderRadius: 15,
+  },
+  bars_btn: {
+    height: vh(7),
+    backgroundColor: "lightgray",
+    width: vw(10),
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 10,
+    borderCurve: "continuous",
   },
 });
