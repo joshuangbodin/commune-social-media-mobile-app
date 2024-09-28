@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { theme } from "@/constant/theme";
 
 interface props {
   style?: any;
@@ -20,8 +21,8 @@ export default ScreenWrapper;
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 10,
+    //paddingHorizontal: 10,
     flex:1,
-    
+    backgroundColor: theme.green[50]
   },
 });

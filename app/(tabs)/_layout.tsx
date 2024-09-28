@@ -16,7 +16,7 @@ const _layout = () => {
           height: vh(9),
           marginHorizontal: vw(15),
           bottom: 25,
-          backgroundColor:'rgba(100,100,100,.2)',
+          backgroundColor:'rgba(200,200,200,.4)',
           padding: 3,
           paddingHorizontal: 5,
           borderRadius: 100,
@@ -37,7 +37,7 @@ const _layout = () => {
           borderRadius: 100,
          
         },
-        tabBarBackground: ()=>(<BlurView intensity={40} style={{backgroundColor:'white', flex:1 , 
+        tabBarBackground: ()=>(<BlurView intensity={100} style={{backgroundColor:'white', flex:1 , 
           borderWidth: 1,
           borderColor:'rgba(150,150,150,.5)',
           borderRadius: 100,

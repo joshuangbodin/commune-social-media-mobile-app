@@ -4,10 +4,11 @@ import { vh } from "@/helpers/responsivesizes";
 
 interface props {
   children: React.ReactNode;
+  style?:any;
 }
 
-const top: React.FC<props> = ({ children }: props) => {
-  return <View style={styles.top_container}>{children}</View>;
+const top: React.FC<props> = ({ children, style }: props) => {
+  return <View style={[styles.top_container,style]}>{children}</View>;
 };
 
 export default top;

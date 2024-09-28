@@ -1,4 +1,5 @@
 import {
+  Image,
   ScrollView,
   StyleSheet,
   TextInput,
@@ -8,56 +9,78 @@ import {
 import React from "react";
 import ScreenWrapper from "@/components/general/ScreenWrapper";
 import Top from "@/components/general/top";
-import {
-  Feather,
-  FontAwesome6,
-  
-} from "@expo/vector-icons";
+import { Feather, FontAwesome6 } from "@expo/vector-icons";
 import CustomText from "@/components/general/text";
 import { vh, vw } from "@/helpers/responsivesizes";
 import CarouselList from "@/components/specific/feed/Carousel";
 import ArticleList from "@/components/specific/feed/articleList";
 import { router } from "expo-router";
+import { theme } from "@/constant/theme";
 
 const feed = () => {
   return (
     <ScreenWrapper>
       <ScrollView showsVerticalScrollIndicator={false}>
+        {/* top */}
+        <Top style={styles.paddingHorizontal}>
+          <FontAwesome6
+            size={vh(3)}
+            color={theme.green[600]}
+            name="bars-staggered"
+          />
+
+          {/* user image */}
+          <Image
+            source={require("../../assets/appimages/feed.jpg")}
+            style={styles.image}
+          />
+        </Top>
+
         {/* greetings */}
-        <View style={styles.greeting}>
-          <CustomText isSupporting>FEED</CustomText>
-          <CustomText size={vh(3.4)} isheader>
-            Explore Today's
-          </CustomText>
-          <CustomText size={vh(3.1)} isheader>
-            Articles
+        <View style={[styles.greeting,styles.paddingHorizontal]}>
+          <CustomText
+            style={{ color: theme.green[700] }}
+            size={vh(3.4)}
+            isheader
+          >
+            Discover
+            <CustomText
+              style={{ fontWeight: "400", marginLeft: 5 }}
+              size={vh(3.4)}
+            >
+              Articles for your Mental Wellbeing Today
+            </CustomText>
           </CustomText>
         </View>
 
         {/* search bar */}
-        <Top>
+        <Top style={[styles.paddingHorizontal, {justifyContent:'flex-start'}]}>
+          {/* left */}
           <TouchableOpacity
             onPress={() => router.push("/(tabs)/explore")}
             style={styles.searchbar}
           >
-            <Feather size={vh(2.5)} name="search" />
+            <Feather size={vh(2)} color={theme.green[500]} name="search" />
             <TextInput
               style={styles.searchbar_input}
-              placeholder="search article, writers and categories"
+              placeholder="Search"
+              placeholderTextColor={theme.green[300]}
             ></TextInput>
           </TouchableOpacity>
+
+          {/* right */}
           <TouchableOpacity style={styles.bars_btn}>
-            <FontAwesome6 size={vh(2.3)} color={"gray"} name="bars-staggered" />
+            <FontAwesome6 size={vh(2.3)} color={theme.green[100]} name="filter" />
           </TouchableOpacity>
         </Top>
 
         {/* Carousel */}
-        <View style={{ marginVertical: 20 }}>
+        <View style={[{ marginVertical: 20 }, styles.paddingLeft]}>
           <CarouselList />
         </View>
 
         {/* Article List */}
-        <View>
+        <View style={styles.paddingHorizontal}>
           <ArticleList />
         </View>
       </ScrollView>
@@ -68,19 +91,29 @@ const feed = () => {
 export default feed;
 
 const styles = StyleSheet.create({
+  paddingHorizontal: {
+    paddingHorizontal: 10,
+  },
+  paddingLeft: {
+    paddingLeft: 10,
+  },
   greeting: {
-    paddingVertical: 20,
+    paddingVertical: 15,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 5,
+    
   },
   searchbar: {
     flexDirection: "row",
-    backgroundColor: "lightgray",
+    backgroundColor: theme.opaque[100](0.17),
     height: vh(7),
-    flex: 1,
+    width:vw(70),
     marginRight: 10,
     alignItems: "center",
     justifyContent: "flex-start",
-    gap: 10,
-    borderRadius: 15,
+    gap: 15,
+    borderRadius: 18,
     paddingHorizontal: 10,
     borderCurve: "continuous",
   },
@@ -88,15 +121,23 @@ const styles = StyleSheet.create({
     flex: 1,
     height: "100%",
     borderRadius: 15,
-    fontSize: vh(1.8)
+    fontSize: vh(1.8),
   },
   bars_btn: {
     height: vh(7),
-    backgroundColor: "lightgray",
-    width: vh(6),
+    backgroundColor: theme.opaque[100](1),
+    width: vh(7),
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: 10,
+    borderRadius: 15,
+    borderCurve: "continuous",
+  },
+  image: {
+    backgroundColor: theme.green[100],
+    width: vh(5),
+    height: vh(5),
+    borderRadius: 12,
+    objectFit: "cover",
     borderCurve: "continuous",
   },
 });

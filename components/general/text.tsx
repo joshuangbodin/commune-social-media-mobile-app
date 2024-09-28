@@ -3,7 +3,8 @@ import React, { useEffect } from "react";
 import { vh } from "@/helpers/responsivesizes";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
-import { theme } from "@/theme/theme";
+import { theme } from "@/constant/theme";
+
 
 interface props {
   text?: string;
@@ -26,7 +27,7 @@ const CustomText = ({
   children,
   size,
   autosize = false,
-  capitalize = true,
+  capitalize = false,
 }: props) => {
   if (children) {
     return (
@@ -83,17 +84,17 @@ const CustomText = ({
 const styles = StyleSheet.create({
   text: {
     fontSize: vh(2),
-    color: "black",
+    color: theme.green[600],
   },
   headertext: {
     fontSize: vh(3.5),
-    color: "black",
+    color: theme.green[600],
     fontWeight: "bold",
   },
   supporting: {
     fontSize: vh(1.8),
-    color: theme.primary.zinc(0.8),
-    fontWeight: "600",
+    color: theme.gray[100],
+    fontWeight: "500",
   },
 });
 
