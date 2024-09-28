@@ -1,4 +1,4 @@
-import { FontAwesome6, Feather } from "@expo/vector-icons";
+import { FontAwesome6, Feather, AntDesign, Entypo } from "@expo/vector-icons";
 import React from "react";
 import { Tabs } from "expo-router";
 import { vh, vw } from "@/helpers/responsivesizes";
@@ -57,7 +57,7 @@ const _layout = () => {
       <Tabs.Screen
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Feather color={color} size={size} name="home" />
+            <AntDesign color={color} size={size} name="home" />
           ),
         }}
         name="feed"
@@ -65,7 +65,7 @@ const _layout = () => {
       <Tabs.Screen
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Feather color={color} size={size} name="compass" />
+            <Entypo color={color} size={size} name="compass" />
           ),
         }}
         name="explore"

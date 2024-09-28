@@ -9,7 +9,7 @@ import {
 import React from "react";
 import ScreenWrapper from "@/components/general/ScreenWrapper";
 import Top from "@/components/general/top";
-import { Feather, FontAwesome6 } from "@expo/vector-icons";
+import { Entypo, Feather, FontAwesome6 } from "@expo/vector-icons";
 import CustomText from "@/components/general/text";
 import { vh, vw } from "@/helpers/responsivesizes";
 import CarouselList from "@/components/specific/feed/Carousel";
@@ -37,7 +37,7 @@ const feed = () => {
         </Top>
 
         {/* greetings */}
-        <View style={[styles.greeting,styles.paddingHorizontal]}>
+        <View style={[styles.greeting, styles.paddingHorizontal]}>
           <CustomText
             style={{ color: theme.green[700] }}
             size={vh(3.4)}
@@ -54,7 +54,9 @@ const feed = () => {
         </View>
 
         {/* search bar */}
-        <Top style={[styles.paddingHorizontal, {justifyContent:'flex-start'}]}>
+        <Top
+          style={[styles.paddingHorizontal, { justifyContent: "flex-start" }]}
+        >
           {/* left */}
           <TouchableOpacity
             onPress={() => router.push("/(tabs)/explore")}
@@ -69,8 +71,11 @@ const feed = () => {
           </TouchableOpacity>
 
           {/* right */}
-          <TouchableOpacity style={styles.bars_btn}>
-            <FontAwesome6 size={vh(2.3)} color={theme.green[100]} name="filter" />
+          <TouchableOpacity
+            onPress={() => router.push("/(tabs)/explore")}
+            style={styles.bars_btn}
+          >
+            <Entypo size={vh(2.5)} color={theme.green[50]} name="sound-mix" />
           </TouchableOpacity>
         </Top>
 
@@ -102,13 +107,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: 5,
-    
   },
   searchbar: {
     flexDirection: "row",
     backgroundColor: theme.opaque[100](0.17),
     height: vh(7),
-    width:vw(70),
+    width: vw(70),
     marginRight: 10,
     alignItems: "center",
     justifyContent: "flex-start",
@@ -122,6 +126,7 @@ const styles = StyleSheet.create({
     height: "100%",
     borderRadius: 15,
     fontSize: vh(1.8),
+    cursor: "pointer",
   },
   bars_btn: {
     height: vh(7),
