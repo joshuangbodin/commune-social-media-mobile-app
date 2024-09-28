@@ -1,7 +1,8 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 import React from "react";
 import { vh, vw } from "@/helpers/responsivesizes";
 import CustomText from "@/components/general/text";
+import { TouchableOpacity } from "react-native";
 
 interface props {
   index: number;
@@ -9,7 +10,9 @@ interface props {
 
 const ArticleCard = ({ index }: props) => {
   return (
-    <View style={[styles.cont, index % 2 != 0 && {flexDirection:'row-reverse'}]}>
+    <TouchableOpacity
+      style={[styles.cont, index % 2 != 0 && { flexDirection: "row-reverse" }]}
+    >
       <View style={styles.left}>
         <Image
           style={styles.image}
@@ -31,7 +34,7 @@ const ArticleCard = ({ index }: props) => {
         </View>
         <View style={[styles.smallcont]}>
           <View style={styles.author}>
-            <CustomText size={vh(2)} isSupporting>
+            <CustomText style={{ color: "red" }} size={vh(2)} isSupporting>
               J
             </CustomText>
           </View>
@@ -45,7 +48,7 @@ const ArticleCard = ({ index }: props) => {
           </View>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
