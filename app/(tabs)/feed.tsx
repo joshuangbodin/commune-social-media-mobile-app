@@ -1,8 +1,6 @@
 import {
-  Image,
   ScrollView,
   StyleSheet,
-  Text,
   TextInput,
   TouchableOpacity,
   View,
@@ -13,7 +11,7 @@ import Top from "@/components/general/top";
 import {
   Feather,
   FontAwesome6,
-  MaterialCommunityIcons,
+  
 } from "@expo/vector-icons";
 import CustomText from "@/components/general/text";
 import { vh, vw } from "@/helpers/responsivesizes";
@@ -49,7 +47,7 @@ const feed = () => {
             ></TextInput>
           </TouchableOpacity>
           <TouchableOpacity style={styles.bars_btn}>
-            <FontAwesome6 size={vh(2.5)} color={"gray"} name="bars-staggered" />
+            <FontAwesome6 size={vh(2.3)} color={"gray"} name="bars-staggered" />
           </TouchableOpacity>
         </Top>
 
@@ -90,11 +88,12 @@ const styles = StyleSheet.create({
     flex: 1,
     height: "100%",
     borderRadius: 15,
+    fontSize: vh(1.8)
   },
   bars_btn: {
     height: vh(7),
     backgroundColor: "lightgray",
-    width: vw(10),
+    width: vh(6),
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 10,

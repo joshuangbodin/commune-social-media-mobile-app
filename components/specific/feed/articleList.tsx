@@ -4,6 +4,7 @@ import CustomText from "@/components/general/text";
 import { vh } from "@/helpers/responsivesizes";
 import Top from "@/components/general/top";
 import { Feather } from "@expo/vector-icons";
+import ArticleCard from "./articleCard";
 
 const ArticleList = () => {
   return (
@@ -14,16 +15,15 @@ const ArticleList = () => {
           Top Articles
         </CustomText>
         <Pressable style={styles.flex}>
-          <CustomText size={vh(1.5)} isSupporting>
-            more
+          <CustomText size={vh(1.6)} isheader>
+            See All
           </CustomText>
-          <Feather color={"gray"} name="arrow-right" size={vh(1.5)} />
         </Pressable>
       </Top>
 
       {/* List */}
       <View>
-        <FlatList data={[]} renderItem={(item) => <View></View>} />
+        <FlatList data={[1, 2, 3]} showsVerticalScrollIndicator={false} renderItem={({item , index}) => <ArticleCard index={index}/>} />
       </View>
     </View>
   );

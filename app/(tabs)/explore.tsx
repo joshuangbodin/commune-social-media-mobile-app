@@ -5,7 +5,7 @@ import ScreenWrapper from "@/components/general/ScreenWrapper";
 const explore = () => {
   return (
     <ScreenWrapper>
-      <Text>explore</Text>
+      
     </ScreenWrapper>
   );
 };
