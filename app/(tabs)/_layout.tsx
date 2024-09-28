@@ -4,6 +4,7 @@ import { Tabs } from "expo-router";
 import { vh, vw } from "@/helpers/responsivesizes";
 import { View } from "react-native";
 import { BlurView } from "expo-blur";
+import { theme } from "@/constant/theme";
 
 const _layout = () => {
   return (
@@ -16,7 +17,7 @@ const _layout = () => {
           height: vh(9),
           marginHorizontal: vw(15),
           bottom: 25,
-          backgroundColor:'rgba(200,200,200,.4)',
+          backgroundColor: theme.opaque[100](.3),
           padding: 3,
           paddingHorizontal: 5,
           borderRadius: 100,
@@ -31,15 +32,16 @@ const _layout = () => {
           // shadowRadius:20
         },
         tabBarShowLabel: false,
-        tabBarActiveTintColor: "black",
-        tabBarActiveBackgroundColor: "white",
+        tabBarActiveTintColor: theme.green[500],
+        tabBarActiveBackgroundColor: theme.green[50],
+        tabBarInactiveTintColor:theme.green[400],
         tabBarItemStyle: {
           borderRadius: 100,
          
         },
         tabBarBackground: ()=>(<BlurView intensity={100} style={{backgroundColor:'white', flex:1 , 
           borderWidth: 1,
-          borderColor:'rgba(150,150,150,.5)',
+          borderColor:theme.opaque[100](.4),
           borderRadius: 100,
           elevation: 0,
           shadowOpacity: 0.2,

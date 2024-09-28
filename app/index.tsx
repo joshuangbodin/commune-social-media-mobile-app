@@ -65,7 +65,7 @@ const index = () => {
             onPress={() => router.push("/feed")}
             style={styles.info_btn}
           >
-            <BlurView intensity={10} style={styles.info_btn_blur} />
+            <BlurView intensity={40} style={styles.info_btn_blur} />
             <View style={styles.info_btn_left}>
               <Ionicons size={vh(2.3)} name="paper-plane-outline" />
             </View>
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     gap: 20,
-    backgroundColor: theme.opaque[100](0.2),
+    backgroundColor: theme.opaque[100](0.15),
     paddingHorizontal: 5,
     paddingTop: 3,
     overflow: "hidden",
