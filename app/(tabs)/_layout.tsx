@@ -10,7 +10,6 @@ const _layout = () => {
   return (
     <Tabs
       screenOptions={{
-        
         headerShown: false,
         tabBarStyle: {
           position:'absolute',
