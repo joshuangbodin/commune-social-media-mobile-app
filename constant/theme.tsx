@@ -1,6 +1,6 @@
 export const theme = {
   green: {
-    50:'#feffff',
+    50:'#feffff', 
     100: "#bfcbc3",
     200: "#a9baaf",
     300: "#94a99c",

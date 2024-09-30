@@ -1,34 +1,55 @@
+// 'ADHD',
+// 'PTSD',
+// 'OCD',
+// 'Depression',
+// 'Anxiety',
+// 'Imposter Syndrome',
+// 'Low Self Esteem',
+// 'Sociopathology',
+// 'psychology',
+// 'meditation',
+// 'mental health',
+// 'others'
+
 export const categories = [
   {
-    name: "Depression",
+    name: "ADHD",
     image: require("../assets/appimages/home1.jpg"),
   },
   {
-    name: "Depression",
+    name: "PTSD",
     image: require("../assets/appimages/signup.jpg"),
   },
   {
-    name: "Depression",
+    name: "OCD",
     image: require("../assets/appimages/home3.jpg"),
   },
   {
-    name: "Depression",
+    name: "Anxiety",
     image: require("../assets/appimages/feed.png"),
   },
   {
-    name: "Depression",
+    name: "Imposter Syndrome",
     image: require("../assets/appimages/feed.jpg"),
   },
   {
-    name: "Depression",
-    image: require("../assets/appimages/feed.jpg"),
+    name: "Low Self Esteem",
+    image: require("../assets/appimages/home1.jpg"),
   },
   {
-    name: "Depression",
-    image: require("../assets/appimages/feed.jpg"),
+    name: "Sociopathology",
+    image: require("../assets/appimages/home2.jpg"),
   },
   {
-    name: "Depression",
+    name: "Psychology",
+    image: require("../assets/appimages/home3.jpg"),
+  },
+  {
+    name: "Mental Health",
+    image: require("../assets/appimages/signup.jpg"),
+  },
+  {
+    name: "Other",
     image: require("../assets/appimages/feed.jpg"),
   },
 ];

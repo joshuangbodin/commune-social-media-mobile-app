@@ -22,10 +22,11 @@ const styles = StyleSheet.create({
   main: {
     justifyContent: "center",
     alignItems: "center",
-    paddingVertical:20
+    paddingVertical:20,
+    paddingHorizontal:10
   },
   container: {
-    width: vw(93),
+    width: '100%',
     height: vh(25),
     backgroundColor: theme.opaque[100](.3),
     borderRadius: 20,
