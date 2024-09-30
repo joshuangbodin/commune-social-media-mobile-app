@@ -38,8 +38,8 @@ const WriteForm = () => {
           Select Category
         </CustomText>
         <View style={styles.categoryCont}>
-          {categories.map((category) => (
-            <TouchableOpacity style={styles.category}>
+          {categories.map((category, index) => (
+            <TouchableOpacity key={index} style={styles.category}>
               <CustomText>{category.name}</CustomText>
             </TouchableOpacity>
           ))}
@@ -89,10 +89,10 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     gap: 5,
   },
-  selectCategory:{
+  selectCategory: {
     backgroundColor: theme.primary.white,
-    padding:15,
+    padding: 15,
     borderRadius: 14,
     borderCurve: "continuous",
-  }
+  },
 });
