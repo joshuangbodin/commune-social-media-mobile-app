@@ -13,7 +13,7 @@ const write = () => {
       <ScrollView style={{paddingBottom:200}} showsVerticalScrollIndicator={false}>
         {/* greetings */}
         <View style={[styles.greeting, styles.paddingHorizontal]}>
-          <CustomText style={{ color: theme.green[700] }} size={vh(3)} isheader>
+          <CustomText style={{ color: theme.gray[700] }} size={vh(2)} isheader>
             Create New Article
           </CustomText>
         </View>

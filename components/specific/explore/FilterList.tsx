@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   categorycard: {
     padding: 2,
     height: vh(5),
-    backgroundColor: theme.opaque[100](0.3),
+    backgroundColor: theme.gray[200],
     justifyContent: "center",
     alignItems: "center",
     width: "auto",

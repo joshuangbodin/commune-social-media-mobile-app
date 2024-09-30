@@ -9,8 +9,8 @@ const ImageCont = () => {
   return (
     <View style={styles.main}>
       <TouchableOpacity style={styles.container}>
-        <Feather color={theme.green[400]} name="image" size={vh(10)}/>
-        <CustomText style={{color:theme.green[400]}}>Cover Photo</CustomText>
+        <Feather color={theme.green[500]} name="image" size={vh(10)}/>
+        <CustomText style={{color:theme.green[500]}}>Cover Photo</CustomText>
       </TouchableOpacity>
     </View>
   );
@@ -28,10 +28,10 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     height: vh(25),
-    backgroundColor: theme.opaque[100](.3),
+    backgroundColor: theme.green[200],
     borderRadius: 20,
     borderWidth:1,
-    borderColor: theme.green[400],
+    borderColor: theme.green[500],
     justifyContent:'center',
     alignItems:'center',
   },

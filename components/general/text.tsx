@@ -84,16 +84,16 @@ const CustomText = ({
 const styles = StyleSheet.create({
   text: {
     fontSize: vh(2),
-    color: theme.green[600],
+    color: theme.gray[900],
   },
   headertext: {
     fontSize: vh(3.5),
-    color: theme.green[600],
+    color: theme.gray[900],
     fontWeight: "bold",
   },
   supporting: {
     fontSize: vh(1.8),
-    color: theme.gray[100],
+    color: theme.gray[400],
     fontWeight: "500",
   },
 });

@@ -14,7 +14,7 @@ const ScreenWrapper: React.FC<props> = ({ style, children }) => {
   const paddingTop = top > 0 ? top + 5 : top + 10;
 
   return (
-    <LinearGradient colors={[theme.green[50] , theme.opaque[100](.08)]} style={[styles.container, style, { paddingTop }]}>{children}</LinearGradient>
+    <View style={[styles.container, style, { paddingTop }]}>{children}</View>
   );
 };
 

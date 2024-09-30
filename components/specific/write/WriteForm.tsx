@@ -17,24 +17,27 @@ const WriteForm = () => {
       <View style={styles.view}>
         <TextInput
           placeholder="Title"
-          placeholderTextColor={theme.green[400]}
+          placeholderTextColor={theme.gray[400]}
           style={styles.input}
         />
       </View>
       <View style={[styles.view, styles.description]}>
         <TextInput
           placeholder="Succint Blog Description."
-          placeholderTextColor={theme.green[400]}
+          placeholderTextColor={theme.gray[400]}
           style={[styles.input]}
           multiline
         />
       </View>
 
-      <View>
-        <CustomText isSupporting style={{ color: theme.green[600] , marginBottom:10}}>
+      <View style={styles.selectCategory}>
+        <CustomText
+          isSupporting
+          style={{ color: theme.gray[600], marginBottom: 10 }}
+        >
           Select Category
         </CustomText>
-        <View style={{flexDirection:'row' , flexWrap:'wrap', gap:3}}>
+        <View style={styles.categoryCont}>
           {categories.map((category) => (
             <TouchableOpacity style={styles.category}>
               <CustomText>{category.name}</CustomText>
@@ -54,9 +57,9 @@ const styles = StyleSheet.create({
     gap: 20,
   },
   view: {
-    backgroundColor: theme.opaque[100](0.2),
+    backgroundColor: theme.primary.white,
     height: vh(8),
-    borderColor: theme.green[200],
+    borderColor: theme.gray[300],
     borderWidth: 1,
     borderRadius: 15,
     borderCurve: "continuous",
@@ -69,16 +72,27 @@ const styles = StyleSheet.create({
   description: {
     height: vh(15),
   },
-  category:{
+  category: {
     padding: 2,
-    height: vh(5),
-    backgroundColor: theme.opaque[100](0.3),
+    height: vh(4.3),
+    backgroundColor: theme.gray[300],
     justifyContent: "center",
     alignItems: "center",
     width: "auto",
     paddingHorizontal: 10,
     borderRadius: 14,
     borderCurve: "continuous",
-    cursor:'pointer'
+    cursor: "pointer",
+  },
+  categoryCont: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 5,
+  },
+  selectCategory:{
+    backgroundColor: theme.primary.white,
+    padding:15,
+    borderRadius: 14,
+    borderCurve: "continuous",
   }
 });

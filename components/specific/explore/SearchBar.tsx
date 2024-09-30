@@ -14,11 +14,11 @@ const SearchBar = () => {
       <Top style={[styles.paddingHorizontal, { justifyContent: "flex-start" }]}>
         {/* left */}
         <View style={styles.searchbar}>
-          <Feather size={vh(2)} color={theme.green[500]} name="search" />
+          <Feather size={vh(2)} color={theme.gray[500]} name="search" />
           <TextInput
             style={styles.searchbar_input}
             placeholder="Search"
-            placeholderTextColor={theme.green[300]}
+            placeholderTextColor={theme.gray[500]}
           ></TextInput>
         </View>
 
@@ -39,9 +39,9 @@ const styles = StyleSheet.create({
   },
   searchbar: {
     flexDirection: "row",
-    backgroundColor: theme.opaque[100](0.17),
+    backgroundColor: theme.gray[200],
     height: vh(7),
-    flex: 1,
+    width: vw(70),
     marginRight: 10,
     alignItems: "center",
     justifyContent: "flex-start",
@@ -55,10 +55,11 @@ const styles = StyleSheet.create({
     height: "100%",
     borderRadius: 15,
     fontSize: vh(1.8),
+    cursor: "pointer",
   },
   bars_btn: {
     height: vh(7),
-    backgroundColor: theme.opaque[100](1),
+    backgroundColor: theme.green[700],
     width: vh(7),
     justifyContent: "center",
     alignItems: "center",

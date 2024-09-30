@@ -25,7 +25,7 @@ const feed = () => {
         <Top style={styles.paddingHorizontal}>
           <FontAwesome6
             size={vh(3)}
-            color={theme.green[600]}
+            color={theme.gray[600]}
             name="bars-staggered"
           />
 
@@ -39,7 +39,7 @@ const feed = () => {
         {/* greetings */}
         <View style={[styles.greeting, styles.paddingHorizontal]}>
           <CustomText
-            style={{ color: theme.green[700] }}
+            style={{ color: theme.gray[700] }}
             size={vh(3.4)}
             isheader
           >
@@ -62,11 +62,11 @@ const feed = () => {
             onPress={() => router.push("/(tabs)/explore")}
             style={styles.searchbar}
           >
-            <Feather size={vh(2)} color={theme.green[500]} name="search" />
+            <Feather size={vh(2)} color={theme.gray[400]} name="search" />
             <TextInput
               style={styles.searchbar_input}
               placeholder="Search"
-              placeholderTextColor={theme.green[300]}
+              placeholderTextColor={theme.gray[400]}
             ></TextInput>
           </TouchableOpacity>
 
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   },
   searchbar: {
     flexDirection: "row",
-    backgroundColor: theme.opaque[100](0.17),
+    backgroundColor: theme.gray[200],
     height: vh(7),
     width: vw(70),
     marginRight: 10,
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
   },
   bars_btn: {
     height: vh(7),
-    backgroundColor: theme.opaque[100](1),
+    backgroundColor: theme.green[700],
     width: vh(7),
     justifyContent: "center",
     alignItems: "center",
