@@ -1,16 +1,22 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { Feather } from "@expo/vector-icons";
 import { vh, vw } from "../../helpers/responsivesizes";
 import CustomText from "../../components/general/typography";
+import { router } from "expo-router";
 
 const Header = ({title}) => {
+
+  function goback(){
+    router.back()
+  }
+
   return (
     <View style={styles.container}>
       {/* go back */}
-      <Pressable style={styles.btn}>
+      <TouchableOpacity onPress={goback} style={styles.btn}>
         <Feather size={vh(4)} name="chevron-left" />
-      </Pressable>
+      </TouchableOpacity>
 
       {/* Title */}
       <CustomText isHeader size={vh(2.5)} text={title} />

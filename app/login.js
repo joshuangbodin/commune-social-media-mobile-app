@@ -7,6 +7,7 @@ import { vh } from "../helpers/responsivesizes";
 import { AntDesign, Feather } from "@expo/vector-icons";
 import CustomText from "../components/general/typography";
 import CustomButton from "../components/general/ButtonUi";
+import { router } from "expo-router";
 
 const login = () => {
   const [secureTextEntry, setSecureTextEntry] = useState(true);
@@ -17,6 +18,14 @@ const login = () => {
 
   function toggleButtonDisplay(val) {
     return val ? "eye-off" : "eye";
+  }
+
+  function login(){
+    router.push("/home")
+  }
+
+  function switchAuthpage(){
+    router.push("/signup")
   }
 
   return (
@@ -73,7 +82,7 @@ const login = () => {
       {/* Redirect Link */}
       <View style={styles.link}>
         <CustomText size={vh(1.9)} text={"Don't have an account?"} />
-        <Pressable style={{}}>
+        <Pressable onPress={switchAuthpage} style={{}}>
           <CustomText
             isHeader
             size={vh(1.9)}

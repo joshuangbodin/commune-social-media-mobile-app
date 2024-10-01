@@ -91,6 +91,7 @@ const styles = StyleSheet.create({
   info: {
     justifyContent: "center",
     alignItems: "center",
+    width:vw(60)
   },
   pagination: {
     flexDirection: "row",
