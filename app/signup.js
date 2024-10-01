@@ -40,7 +40,7 @@ const signup = () => {
     return val ? theme.colors.green_400 : theme.colors.zinc_300;
   }
 
-  function login() {
+  function signup() {
     router.push("/home");
   }
 
@@ -113,7 +113,7 @@ const signup = () => {
 
         {/* button to Login */}
         <View>
-          <CustomButton title={"Sign Up"} />
+          <CustomButton onPress={signup} title={"Sign Up"} />
         </View>
 
         {/* Redirect Link */}
