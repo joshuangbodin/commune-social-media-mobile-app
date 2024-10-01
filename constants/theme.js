@@ -1,5 +1,6 @@
 export const theme = {
   colors: {
+    // green
     green_50: "#F0FDF4",
     green_100: "#DCFCE7",
     green_200: "#BBF7D0",
@@ -10,6 +11,18 @@ export const theme = {
     green_700: "#15803D",
     green_800: "#166534",
     green_900: "#14532D",
+
+    // zinc
+    zinc_50: "#FAFAFA",
+    zinc_100: "#F4F4F5",
+    zinc_200: "#E4E4E7",
+    zinc_300: "#D4D4D8",
+    zinc_400: "#A1A1AA",
+    zinc_500: "#71717A",
+    zinc_600: "#52525B",
+    zinc_700: "#3F3F46",
+    zinc_800: "#27272A",
+    zinc_900: "#18181B",
   },
   curves: {
     xs: 6,

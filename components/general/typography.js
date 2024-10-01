@@ -1,0 +1,33 @@
+import { StyleSheet, Text, View } from "react-native";
+import Animated from "react-native-reanimated";
+import React from "react";
+import { vh, vw } from "../../helpers/responsivesizes";
+
+const CustomText = ({ text, style, color, size, isHeader, animation }) => {
+  return (
+    <Animated.Text
+      entering={animation}
+      style={[
+        styles.text,
+        style,
+        { fontSize: size },
+        { color },
+        isHeader && styles.header,
+      ]}
+    >
+      {text}
+    </Animated.Text>
+  );
+};
+
+export default CustomText;
+
+const styles = StyleSheet.create({
+  text: {
+    fontSize: vh(1.8),
+  },
+  header: {
+    fontSize: vh(4),
+    fontWeight: "500",
+  },
+});
