@@ -9,10 +9,10 @@ const CustomText = ({ text, style, color, size, isHeader, animation }) => {
       entering={animation}
       style={[
         styles.text,
-        style,
+        isHeader && styles.header,
         { fontSize: size },
         { color },
-        isHeader && styles.header,
+        style
       ]}
     >
       {text}

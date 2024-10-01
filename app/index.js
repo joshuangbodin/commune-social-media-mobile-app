@@ -4,6 +4,7 @@ import { theme } from "../constants/theme";
 import CustomText from "../components/general/typography";
 import { router } from "expo-router";
 import { BounceInDown, SlideInDown } from "react-native-reanimated";
+import { vh } from "../helpers/responsivesizes";
 
 const index = () => {
   useEffect(AutoRoute, []);
@@ -23,6 +24,7 @@ const index = () => {
         isHeader
         color={theme.colors.zinc_100}
         text={"Empathia"}
+        size={vh(3)}
       />
     </View>
   );
