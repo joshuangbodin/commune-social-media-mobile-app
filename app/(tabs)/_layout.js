@@ -20,7 +20,7 @@ const _layout = () => {
         name="home"
         options={{
           tabBarIcon: ({ color }) => (
-            <FontAwesome6 size={vh(2.7)} color={color} name="house" />
+            <FontAwesome6 size={vh(3.4)} color={color} name="house-chimney-window" />
           ),
         }}
       />
@@ -28,7 +28,7 @@ const _layout = () => {
         name="discover"
         options={{
           tabBarIcon: ({ color }) => (
-            <Ionicons size={vh(2.7)} color={color} name="compass" />
+            <Ionicons size={vh(3.4)} color={color} name="compass" />
           ),
         }}
       />
@@ -36,7 +36,7 @@ const _layout = () => {
         name="activity"
         options={{
           tabBarIcon: ({ color }) => (
-            <Ionicons size={vh(2.7)} color={color} name="calendar" />
+            <Ionicons size={vh(3.4)} color={color} name="calendar" />
           ),
         }}
       />
@@ -44,7 +44,7 @@ const _layout = () => {
         name="chat"
         options={{
           tabBarIcon: ({ color }) => (
-            <Ionicons size={vh(2.7)} color={color} name="chatbubbles" />
+            <Ionicons size={vh(3.4)} color={color} name="mail" />
           ),
         }}
       />

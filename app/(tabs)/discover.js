@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import ScreenWrapper from '../../components/general/Screen'
 
 const discover = () => {
   return (
-    <View>
-      <Text>discover</Text>
-    </View>
+    <ScreenWrapper>
+
+    </ScreenWrapper>
   )
 }
 
